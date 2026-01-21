@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rays.dto.UserDTO;
 
-public class BaseCtl<T extends BaseDTO, F extends BaseForm, S extends BaseServiceInt<T>> {
+public class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends BaseServiceInt<T>> {
 
 	@Autowired
 	protected S baseService;
@@ -117,8 +117,7 @@ public class BaseCtl<T extends BaseDTO, F extends BaseForm, S extends BaseServic
 	}
 
 	@PostMapping("deleteMany/{ids}")
-	public ORSResponse deleteMany(@PathVariable String[] ids, @RequestParam("pageNo") String pageNo,
-			@RequestBody F form) {
+	public ORSResponse deleteMany(@PathVariable String[] ids, @RequestParam("pageNo") String pageNo, @RequestBody F form) {
 
 		ORSResponse res = new ORSResponse(true);
 		try {

@@ -3,7 +3,6 @@ package com.rays.common;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -113,12 +112,6 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 		return query;
 	}
 
-	@Override
-	public List search(T dto, UserContext userContext) {
-		return search(dto, 0, 0, userContext);
-	}
-
-	@Override
 	public List search(T dto, int pageNo, int pageSize, UserContext userContext) {
 
 		TypedQuery<T> query = createCriteria(dto, userContext);
@@ -130,6 +123,10 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 
 		List list = query.getResultList();
 		return list;
+	}
+
+	public List search(T dto, UserContext userContext) {
+		return search(dto, 0, 0, userContext);
 	}
 
 	protected boolean isEmptyString(String val) {

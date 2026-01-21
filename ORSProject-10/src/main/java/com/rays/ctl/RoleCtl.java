@@ -11,7 +11,8 @@ import com.rays.service.RoleServiceInt;
 
 @RestController
 @RequestMapping(value = "Role")
-public class RoleCtl extends BaseCtl<RoleDTO, RoleForm, RoleServiceInt>{
+public class RoleCtl extends BaseCtl<RoleForm, RoleDTO, RoleServiceInt>{
+	
 	
 	
 
