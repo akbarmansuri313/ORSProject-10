@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ElementRef, QueryList, ViewChildren } from "@angular/core";
 import { BaseCtl } from "./base.component";
 import { ServiceLocatorService } from "./service-locator.service";
 import { ActivatedRoute } from "@angular/router";
@@ -9,6 +9,10 @@ import { ActivatedRoute } from "@angular/router";
     template: ''
 })
 export class BaseListCtl extends BaseCtl {
+
+    @ViewChildren('checkboxes') checkboxes! : QueryList<ElementRef>;
+
+    deleteRecordList : any[] = [];
 
     isMasterSel: boolean = false;
 
@@ -32,4 +36,38 @@ export class BaseListCtl extends BaseCtl {
         this.form.pageNo++;
         this.search();
     }
+
+    checkUncheckAll(event : any){
+        const checked  = event.target.checked;
+        this.checkboxes.forEach(cb => cb.nativeElement.checked = checked);
+    }
+
+    checklistUpdate(){
+        const totalChecked = this.checkboxes.filter(cb => cb.nativeElement.checked).length;
+        this.isMasterSel = totalChecked === this.form.list.length;
+    }
+
+    override deleteMany(){
+
+        this.form.error = false;
+        this.deleteRecordList  = [];
+
+        this.checkboxes.forEach(cb => {
+
+            if(cb.nativeElement.checked){
+                this.deleteRecordList.push(cb.nativeElement.id);
+            }
+        });
+        // if (this.deleteRecordList.length >0) {
+
+        //     this.form.pageNo = 0;
+        //     super.deleteMany(this.deleteRecordList + '?pageNo=' + this.form.pageNo);
+            
+    
+        // }
+
+        this.isMasterSel = false
+    }
+
+    
 }

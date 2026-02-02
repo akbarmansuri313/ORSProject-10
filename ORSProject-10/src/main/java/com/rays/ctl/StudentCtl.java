@@ -29,9 +29,9 @@ public class StudentCtl extends BaseCtl<StudentForm, StudentDTO, StudentServiceI
 
 		CollegeDTO dto = new CollegeDTO();
 
-		List<DropdownList> studentList = collegeService.search(dto, userContext);
+		List<DropdownList> collegeList = collegeService.search(dto, userContext);
 		
-		res.addResult("studentList", studentList);
+		res.addResult("collegeList", collegeList);
 		return res;
 		
 

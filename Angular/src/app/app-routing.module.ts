@@ -22,6 +22,8 @@ import { SubjectListComponent } from './subject/subject-list.component';
 import { CollegeListComponent } from './college/college-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { UserListComponent } from './user/user-list.component';
+import { MarksheetListComponent } from './marksheet/marksheet-list.component';
+import { FacultyListComponent } from './faculty/faculty-list.component';
 
 const routes: Routes = [
 {
@@ -59,6 +61,11 @@ component : LoginComponent
   path: 'dashboard',
   component : DashboardComponent
 },
+
+ {
+    path: 'user',
+    component: UserComponent
+  },
 
  {
     path: 'user/:id',
@@ -139,14 +146,24 @@ component : LoginComponent
     component: FacultyComponent
   },
 
-   {
+ {
     path: 'facultyList',
-    component: FacultyComponent
+    component: FacultyListComponent
   },
 
   {
     path: 'marksheet',
     component: MarksheetComponent
+  },
+
+   {
+    path: 'marksheet/:id',
+    component: MarksheetComponent
+  },
+
+   {
+    path: 'marksheetList',
+    component: MarksheetListComponent
   },
 
   {
