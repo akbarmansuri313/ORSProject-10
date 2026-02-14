@@ -34,7 +34,6 @@ public class BaseForm {
 	}
 
 	public <T extends BaseDTO> T initDTO(T dto) {
-		System.out.println("id => base dto => " + id);
 		if (id != null && id > 0) {
 			dto.setId(id);
 		} else {

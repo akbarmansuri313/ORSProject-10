@@ -2,7 +2,6 @@
 package com.rays.common;
 
 import java.sql.Timestamp;
-
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 import org.hibernate.annotations.GenericGenerator;
 
 @MappedSuperclass
-public abstract class BaseDTO  {
+public abstract class BaseDTO implements DropdownList  {
 
 	@Id
 	@GeneratedValue(generator = "ncsPk")
@@ -81,5 +80,11 @@ public abstract class BaseDTO  {
 
 	public String getKey() {
 		return String.valueOf(id);
+	}
+	
+	@Override
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

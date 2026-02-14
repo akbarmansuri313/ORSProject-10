@@ -81,4 +81,10 @@ public abstract class BaseDTO implements DropdownList  {
 	public String getKey() {
 		return String.valueOf(id);
 	}
+	
+	@Override
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
