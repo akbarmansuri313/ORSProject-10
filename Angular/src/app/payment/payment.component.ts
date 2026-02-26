@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { BaseCtl } from '../base.component';
+import { ServiceLocatorService } from '../service-locator.service';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-payment',
+  templateUrl: './payment.component.html',
+  styleUrls: ['./payment.component.css']
+})
+export class PaymentComponent extends BaseCtl {
+
+   constructor(public locator : ServiceLocatorService, route : ActivatedRoute){
+      super(locator.endpoints.PAYMENT, locator, route)
+    }
+
+}

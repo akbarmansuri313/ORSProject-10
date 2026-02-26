@@ -58,13 +58,16 @@ export class BaseListCtl extends BaseCtl {
                 this.deleteRecordList.push(cb.nativeElement.id);
             }
         });
-        // if (this.deleteRecordList.length >0) {
+        if (this.deleteRecordList.length >0) {
 
-        //     this.form.pageNo = 0;
-        //     super.deleteMany(this.deleteRecordList + '?pageNo=' + this.form.pageNo);
+            this.form.pageNo = 0;
+            super.deleteMany(this.deleteRecordList + '?pageNo=' + this.form.pageNo);
             
     
-        // }
+        } else{
+            this.form.error = true;
+            this.form.message = "Select At Least One Record...!!!!"
+        }
 
         this.isMasterSel = false
     }

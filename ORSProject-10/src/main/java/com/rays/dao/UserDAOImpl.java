@@ -11,11 +11,14 @@ import org.springframework.stereotype.Repository;
 
 import com.rays.common.BaseDAOImpl;
 import com.rays.common.UserContext;
+import com.rays.dto.AttachmentDTO;
 import com.rays.dto.RoleDTO;
 import com.rays.dto.UserDTO;
 
 @Repository
 public class UserDAOImpl extends BaseDAOImpl<UserDTO> implements UserDAOInt {
+
+	
 
 	@Autowired
 	RoleDAOImpl dao;
@@ -30,6 +33,13 @@ public class UserDAOImpl extends BaseDAOImpl<UserDTO> implements UserDAOInt {
 	protected void populate(UserDTO dto, UserContext userContext) {
 
 		RoleDTO dto1 = dao.findByPK(dto.getRoleId(), userContext);
+
+		if (dto.getId() != null && dto.getId() > 0) {
+			
+			UserDTO userData = findByPK(dto.getId(), null);
+			
+			dto.setImageId(userData.getImageId());
+		}
 
 		dto.setRoleName(dto1.getName());
 	}

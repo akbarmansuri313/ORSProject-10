@@ -1,0 +1,70 @@
+<div align="center">
+    <h1 *ngIf="!form.data.id" align="center" style="margin-bottom: 5px; color: navy">Add Payment</h1>
+    <h1 *ngIf="form.data.id>0" align="center" style="margin-bottom: 5px; color: navy">Update Payment </h1>
+
+    <div style="height: 20px; margin-bottom: 10px; text-align: center;">
+        <h3 style="margin: 0; color: green;" *ngIf="!form.error && form.message">{{ form.message }}</h3>
+        <h3 style="margin: 0; color: red;" *ngIf="form.error && form.message">{{ form.message }}</h3>
+    </div>
+
+    <table>
+
+        <tr>
+            <th align="left">Payment Id<span style="color:red">*</span></th>
+            <td>
+                <input type="number" name="paymentId" [(ngModel)]="form.data.paymentId"
+                    placeholder="Enter Notification Id">
+            </td>
+            <td style="position: fixed; color: red;">
+                {{form.inputerror.paymentId}}
+            </td>
+        </tr>
+
+
+        <tr>
+            <th align="left">Amount <span style="color: red">*</span></th>
+            <td><input type="text" name="amount" [(ngModel)]="form.data.amount" placeholder="Enter Amount"></td>
+            <td style="position: fixed; color: red;">{{form.inputerror.amount}}</td>
+        </tr>
+        <tr>
+            <th align="left">Payment Date <span style="color: red">*</span></th>
+            <td>
+                <input type="date" name="paymentDate" [(ngModel)]="form.data.paymentDate"
+                    [ngModel]="form.data.paymentDate | date:'yyyy-MM-dd'" placeholder="Select Payment Date"
+                    style="width: 97%;">
+            </td>
+            <td style="position: fixed; color: red;">
+                {{form.inputerror.paymentDate}}
+            </td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th align="left">paymentMode<span style="color: red">*</span></th>
+            <td>
+                <select name="status" [(ngModel)]="form.data.paymentMode" style="width: 170px;">
+                    <option value="undefined">------------Select------------</option>
+                    <option value="Online">Online</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Cheque">Cheque</option>
+                    <option value="NEFT">NEFT</option>
+                </select>
+            </td>
+            <td style="position: fixed; color: red;">{{form.inputerror.paymentMode}}</td>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <td align="left" colspan="2">
+                <button (click)="submit()">save</button> &nbsp;
+                <button (click)="reset()">reset</button> &nbsp;
+                <!-- <button (click)="forward('/departmentList')">list</button> -->
+            </td>
+        </tr>
+    </table>
+</div>

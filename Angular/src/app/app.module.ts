@@ -35,6 +35,14 @@ import { MarksheetListComponent } from './marksheet/marksheet-list.component';
 import { CourseListComponent } from './course/course-list.component';
 import { CollegeListComponent } from './college/college-list.component';
 import { FacultyListComponent } from './faculty/faculty-list.component';
+import { ActivityComponent } from './activity/activity.component';
+import { ActivityListComponent } from './activity/activity-list.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationListComponent } from './notification/notification-list.component';
+import { DepartmentComponent } from './department/department.component';
+import { DepartmentListComponent } from './department/department-list.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentListComponent } from './payment/payment-list.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +71,15 @@ import { FacultyListComponent } from './faculty/faculty-list.component';
     MarksheetListComponent,
     CourseListComponent,
     CollegeListComponent,
-    FacultyListComponent
+    FacultyListComponent,
+    ActivityComponent,
+    ActivityListComponent,
+    NotificationComponent,
+    NotificationListComponent,
+    DepartmentComponent,
+    DepartmentListComponent,
+    PaymentComponent,
+    PaymentListComponent
   ],
   imports: [
     BrowserModule,

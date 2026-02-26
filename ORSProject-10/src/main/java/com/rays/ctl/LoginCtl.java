@@ -85,7 +85,6 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		dto.setDob(form.getDob());
 		dto.setGender(form.getGender());
 		dto.setPhone(form.getPhone());
-
 		dto.setStatus("Inactive");
 		dto.setRoleId(2L);
 
