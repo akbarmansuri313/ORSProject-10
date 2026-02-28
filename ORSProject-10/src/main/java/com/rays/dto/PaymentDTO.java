@@ -58,12 +58,12 @@ public class PaymentDTO extends BaseDTO {
 
 	@Override
 	public String getUniqueKey() {
-		return "paymentDate";
+		return paymentMode;
 	}
 
 	@Override
 	public String getUniqueValue() {
-		return "paymentDate";
+		return "paymentMode";
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class PaymentDTO extends BaseDTO {
 
 	@Override
 	public String getTableName() {
-		return "Paymentss";
+		return "Payment";
 	}
 
 }
