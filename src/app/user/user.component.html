@@ -11,13 +11,13 @@
 
     <table>
         <tr>
-            <th align="left">First Name<span style="color: red">*</span></th>
+            <th align="left">{{'UserForm.FirstName' | translate}}<span style="color: red">*</span></th>
             <td><input type="text" name="firstName" [(ngModel)]="form.data.firstName" placeholder="Enter First Name"></td>
             <td style="position: fixed; color: red;">{{form.inputerror.firstName}}</td>
         </tr>
 
         <tr>
-            <th align="left">Last Name<span style="color: red">*</span></th>
+            <th align="left">{{'UserForm.LastName' | translate}}<span style="color: red">*</span></th>
             <td><input type="text" name="lastName" [(ngModel)]="form.data.lastName" placeholder="Enter Last Name"></td>
             <td style="position: fixed; color: red;">{{form.inputerror.lastName}}</td>
         </tr>

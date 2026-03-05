@@ -20,4 +20,5 @@ export class EndpointServiceService {
   public ACTIVITY = this.SERVER_URL + "/Activity";
  public NOTIFICATION = this.SERVER_URL + "/Notification";
   public DEPARTMENT = this.SERVER_URL + "/Department";
+   public APPOINTMENT = this.SERVER_URL + "/Appointment"
 }

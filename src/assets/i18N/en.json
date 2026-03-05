@@ -89,5 +89,27 @@
             "Save": "Save",
             "List": "List"
         }
+    },
+    "CollegeForm": {
+        "AddCollege": "Add College",
+        "UpdateCollege": "Update College",
+        "Name": "Name",
+        "Address": "Address",
+        "State": "State",
+        "City": "City",
+        "Phone No": "Phone No",
+        "Status": "Status",
+        "CollegePlaceholders": {
+            "Name": "Enter College Name",
+            "Address": "Enter Address",
+            "State": "Enter State",
+            "City": "Enter City",
+            "Phone No": "Enter Phone Number"
+        },
+        "Buttons": {
+            "Save": "Save",
+            "List": "List",
+            "Reset": "Reset"
+        }
     }
 }

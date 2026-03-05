@@ -30,6 +30,10 @@ import { NotificationListComponent } from './notification/notification-list.comp
 import { DepartmentComponent } from './department/department.component';
 import { DepartmentListComponent } from './department/department-list.component';
 import { ChangePasswordComponent } from './user/change-password.component';
+import { MyprofileComponent } from './user/myprofile.component';
+import { ForgetpasswordComponent } from './login/forgetpassword.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment/appointment-list.component';
 
 const routes: Routes = [
 {
@@ -185,6 +189,20 @@ component : LoginComponent
     component: ChangePasswordComponent
   },
 
+   {
+    path: 'myprofile',
+    component: MyprofileComponent
+  },
+  {
+    path: 'myprofile/:id',
+    component: MyprofileComponent
+  },
+
+  {
+    path : 'forgetpassword',
+    component : ForgetpasswordComponent
+  },
+
   {
     path : 'activity',
     component : ActivityComponent
@@ -222,6 +240,19 @@ component : LoginComponent
    {
     path : 'departmentList',
     component : DepartmentListComponent
+  },
+
+   {
+    path : 'appointment',
+    component : AppointmentComponent
+  },
+   {
+    path : 'appointment/:id',
+    component : AppointmentComponent
+  },
+   {
+    path : 'appointmentList',
+    component : AppointmentListComponent
   }
 
 

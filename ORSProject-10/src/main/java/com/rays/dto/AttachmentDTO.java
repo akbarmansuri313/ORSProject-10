@@ -31,7 +31,9 @@ public class AttachmentDTO extends BaseDTO {
 	@Column(name = "DOC")
 	private byte[] doc;
 
+	
 	public AttachmentDTO() {
+
 	}
 
 	public AttachmentDTO(MultipartFile file) {

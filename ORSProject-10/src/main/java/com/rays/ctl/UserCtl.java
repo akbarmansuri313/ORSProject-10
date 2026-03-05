@@ -23,7 +23,7 @@ import com.rays.dto.AttachmentDTO;
 import com.rays.dto.RoleDTO;
 import com.rays.dto.UserDTO;
 import com.rays.form.UserForm;
-import com.rays.service.AttachmentService;
+import com.rays.service.AttachmentServiceInt;
 import com.rays.service.RoleServiceInt;
 import com.rays.service.UserServiceInt;
 
@@ -35,7 +35,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	public UserServiceInt userService;
 	
 	@Autowired
-	AttachmentService attachmentService;
+	AttachmentServiceInt attachmentService;
 	
 	@Autowired
 	RoleServiceInt roleService;
@@ -55,8 +55,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	}
 
 	@PostMapping("/profilePic/{userId}")
-	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
-			HttpServletRequest req) {
+	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file, HttpServletRequest req) {
 
 		AttachmentDTO attachmentDto = new AttachmentDTO(file);
 

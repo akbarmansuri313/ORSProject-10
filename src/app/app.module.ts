@@ -44,6 +44,9 @@ import { DepartmentListComponent } from './department/department-list.component'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ChangePasswordComponent } from './user/change-password.component';
+import { MyprofileComponent } from './user/myprofile.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment/appointment-list.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -85,7 +88,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     NotificationListComponent,
     DepartmentComponent,
     DepartmentListComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    MyprofileComponent,
+    AppointmentComponent,
+    AppointmentListComponent
   ],
   imports: [
     BrowserModule,

@@ -89,5 +89,28 @@
             "Save": "सहेजें",
             "List": "सूची"
         }
-    }
+    },
+    "CollegeForm": {
+        "AddCollege": "कॉलेज जोड़ें",
+        "UpdateCollege": "कॉलेज अपडेट करें",
+        "Name": "नाम",
+        "Address": "पता",
+        "State": "राज्य",
+        "City": "शहर",
+        "Phone No": "फोन नंबर",
+        "Status": "स्थिति",
+        "CollegePlaceholders": {
+            "Name": "कॉलेज का नाम दर्ज करें",
+            "Address": "पता दर्ज करें",
+            "State": "राज्य दर्ज करें",
+            "City": "शहर दर्ज करें",
+            "Phone No": "फोन नंबर दर्ज करें"
+        },
+    
+      "Buttons": {
+            "Save": "सहेजें",
+            "List": "सूची",
+            "Reset": "रीसेट"
+        }
+}
 }

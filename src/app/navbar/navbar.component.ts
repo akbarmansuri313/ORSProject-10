@@ -48,4 +48,9 @@ export class NavbarComponent {
     });
   }
 
+    forward() {
+    this.form.data.userId = localStorage.getItem("userId");
+    this.servicelocator.forward("/myprofile/" + this.form.data.userId);
+  }
+
 }
